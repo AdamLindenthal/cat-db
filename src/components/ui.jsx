@@ -46,9 +46,10 @@ export function Stamp({ text, color = RED, rotate = -8, size = 22, style, subtex
 }
 
 // Paw print SVG
-export function Paw({ size = 40, color = INK, style, rotate = 0 }) {
+export function Paw({ size = 40, color = INK, style, rotate = 0, onClick }) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40"
+      onClick={onClick}
       style={{ transform: `rotate(${rotate}deg)`, display: 'inline-block', flexShrink: 0, ...style }}>
       <ellipse cx="20" cy="26" rx="9" ry="7" fill={color} />
       <ellipse cx="10" cy="15" rx="3.5" ry="5" fill={color} />
